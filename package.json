@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "express": "^4.17.1", // Web framework for Node.js
-    "mongoose": "^5.10.9", // MongoDB object modeling for Node.js
+    "mongoose": "^5.12.3", // MongoDB object modeling for Node.js (updated to a stable release)
     "body-parser": "^1.19.0", // Middleware to parse incoming request bodies
     "cors": "^2.8.5" // Middleware to enable CORS
   },
