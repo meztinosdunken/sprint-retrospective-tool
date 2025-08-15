@@ -16,7 +16,12 @@ mongoose.connect('mongodb://localhost:27017/sprint-retrospective-tool', { useNew
   .catch(err => console.error('MongoDB connection error:', err));
 
 app.get('/', (req, res) => {
-  res.send('Welcome to Sprint Retrospective Tool API');
+  try {
+    res.send('Welcome to Sprint Retrospective Tool API');
+  } catch (error) {
+    console.error('Error handling request:', error);
+    res.status(500).send('Internal Server Error');
+  }
 });
 
 app.listen(PORT, () => {
